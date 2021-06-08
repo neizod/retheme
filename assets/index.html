@@ -12,9 +12,9 @@ this is the index page
 </p>
 
 <ul>
-{{ for post in site.posts }}
-<li>{{ post.title }}</li>
-{{ endfor }}
+{% for post in site.posts %}
+<li>item is: {{ post.title }} end</li>
+{% endfor %}
 </ul>
 
 <p>
