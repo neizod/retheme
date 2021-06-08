@@ -1,8 +1,22 @@
 ---
+title: Default Title
 layout: default
 permalink: /index.html
 ---
 
-this is the index page
+<h1>page title is: {{ page.title }}</h1>
 
+<p>
+this is the index page
 {{ site.posts | inspect }}
+</p>
+
+<ul>
+{{ for post in site.posts }}
+<li>{{ post.title }}</li>
+{{ endfor }}
+</ul>
+
+<p>
+the config for this site title is {{ site.title }} (can it be override?)
+</p>
